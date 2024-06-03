@@ -1,15 +1,16 @@
 {
-    "name": "Node.js & TypeScript",
-    "dockerFile": "Dockerfile",
-    "extensions": [
-      "dbaeumer.vscode-eslint",
-      "esbenp.prettier-vscode"
-    ],
-    "settings": {
-      "terminal.integrated.shell.linux": "/bin/bash"
-    },
-    "postCreateCommand": "npm install",
-    "remoteUser": "vscode"
-    
-  }
-  
+  "name": "My Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "remoteUser": "vscode",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "ms-vscode.cpptools",
+    "ms-azuretools.vscode-docker"
+  ],
+  "postCreateCommand": "npm install"
+}
